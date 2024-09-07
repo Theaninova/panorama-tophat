@@ -2,14 +2,14 @@ import cadquery as cq
 from settings import Settings
 
 
-def side(settings: Settings, axis):
+def side(settings: Settings, axis) -> cq.Workplane:
     length = settings.size[axis] - settings.corner_size[axis] * 2
     return (
         cq.Workplane("XY")
         .box(length, settings.extrusion_thickness, settings.thickness)
         .faces("<Z")
         .workplane()
-        .rect(length - (settings.holder_padding * 2), 7.2)
+        .rect(length - (settings.holder_padding * 2), 6.2)
         .extrude(1, taper=45)
         .faces(">Z")
         .workplane()

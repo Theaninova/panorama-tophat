@@ -4,7 +4,7 @@ from util import transform
 import cadquery as cq
 
 
-def front(settings: Settings):
+def front(settings: Settings) -> cq.Workplane:
     return (
         side(settings, 0)
         .faces(">Y")

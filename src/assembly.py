@@ -6,7 +6,7 @@ from side import side
 from umbilical import umbilical
 
 
-def assembly(settings: Settings):
+def assembly(settings: Settings) -> cq.Assembly:
     return (
         cq.Assembly()
         .add(

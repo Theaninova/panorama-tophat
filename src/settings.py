@@ -16,7 +16,7 @@ class Settings:
     fillet = 2
 
     ptfe_d = 3
-    ptfe_cd = 8.5
+    ptfe_cd = 9
     ptfe_cz = 6
 
     can_thickness = 5.5

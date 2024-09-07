@@ -15,6 +15,7 @@
     - 350 spec: 200mm
 - 16x M3x12 SHCS
 - 16x M3 Hammerhead nut
+- M10 PTFE fitting (2x per toolhead)
 
 ## Custom Specs
 

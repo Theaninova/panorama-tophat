@@ -2,7 +2,7 @@ import cadquery as cq
 from settings import Settings
 
 
-def corner(settings: Settings):
+def corner(settings: Settings) -> cq.Workplane:
     return (
         cq.Workplane("XY")
         .box(settings.corner_size[0], settings.corner_size[1], settings.thickness)
