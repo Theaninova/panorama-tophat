@@ -16,7 +16,7 @@ class Settings:
     fillet = 2
 
     ptfe_d = 3
-    ptfe_cd = 9.6
+    ptfe_cd = 9.5
     ptfe_cz = 6
     ptfe_safe_cut = (3, 10)
 
