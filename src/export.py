@@ -13,13 +13,14 @@ dname = os.path.dirname(abspath)
 os.chdir(dname)
 
 side_length = 200
+extra_length = 120 + 2 * 20
 
 for size in [250, 300, 350]:
     settings = Settings()
-    settings.size = (size + 120, size + 120)
+    settings.size = (size + extra_length, size + extra_length)
     settings.corner_size = (
-        (size + 120 - side_length) / 2,
-        (size + 120 - side_length) / 2,
+        (size + extra_length - side_length) / 2,
+        (size + extra_length - side_length) / 2,
     )
 
     result = corner(settings)
@@ -27,8 +28,9 @@ for size in [250, 300, 350]:
     cq.exporters.export(result, f"../STLs/corner_{size}_x4.stl")
 
 settings = Settings()
-settings.size = (420, 420)
-settings.corner_size = ((420 - side_length) / 2, (420 - side_length) / 2)
+length = 300 + extra_length
+settings.size = (length, length)
+settings.corner_size = ((length - side_length) / 2, (length - side_length) / 2)
 
 for count in range(2, 7):
     settings.umbilical_count = count
